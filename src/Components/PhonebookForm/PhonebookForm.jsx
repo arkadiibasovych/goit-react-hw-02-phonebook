@@ -20,6 +20,9 @@ const useStyles = createUseStyles({
     display: 'flex',
     marginBottom: 10,
     justifyContent: 'space-between',
+    '&:hover': {
+      color: 'orange',
+    },
   },
   button: {
     backgroundColor: '#fff',
