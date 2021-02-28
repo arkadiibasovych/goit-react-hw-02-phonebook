@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 
 const useStyles = createUseStyles({
   listItem: {
+    width: 300,
     marginLeft: 'auto',
     marginRight: 'auto',
-    width: 300,
     display: 'flex',
     alignItems: 'center',
     padding: 10,
@@ -24,9 +24,9 @@ const useStyles = createUseStyles({
     borderRadius: 3,
     outline: 'none',
     cursor: 'pointer',
-    '&:active': {
+    '&:hover': {
+      boxShadow: '1px 1px 0px 0px orange',
       color: 'orange',
-      boxShadow: '3px 3px 0px 0px orange',
     },
   },
 });
