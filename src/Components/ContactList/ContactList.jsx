@@ -1,6 +1,7 @@
-import ContactItem from './ContactItem';
-import PropTypes from 'prop-types';
 import { createUseStyles } from 'react-jss';
+import PropTypes from 'prop-types';
+import ContactListItem from './ContactListItem';
+
 const useStyles = createUseStyles({
   list: {
     padding: 0,
@@ -8,11 +9,11 @@ const useStyles = createUseStyles({
   },
 });
 const ContactList = ({ contacts, onDelete }) => {
-  const classes = useStyles();
+  const s = useStyles();
   return (
-    <ul className={classes.list}>
+    <ul className={s.list}>
       {contacts.map(contact => (
-        <ContactItem key={contact.id} {...contact} onDelete={onDelete} />
+        <ContactListItem key={contact.id} {...contact} onDelete={onDelete} />
       ))}
     </ul>
   );

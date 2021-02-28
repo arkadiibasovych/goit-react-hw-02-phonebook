@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import PhonebookForm from './Components/PhonebookForm';
+// import PhonebookForm from './Components/PhonebookForm';
 import ContactList from './Components/ContactList';
-import Filter from './Components/Filter';
+// import Filter from './Components/Filter';
 
 const App = () => {
   const [contacts, setContacts] = useState([
@@ -39,10 +39,10 @@ const App = () => {
 
   return (
     <>
-      <h1>Phonebook</h1>
-      <PhonebookForm onSubmit={handleSubmit} onCheckUniq={handleUniq} />
+      <h2>Phonebook</h2>
+      {/* <PhonebookForm onSubmit={handleSubmit} onCheckUniq={handleUniq} /> */}
       <h2>Contacts</h2>
-      <Filter value={filter} onChange={handleFilterChange} />
+      {/* <Filter value={filter} onChange={handleFilterChange} /> */}
       <ContactList contacts={handleVisibleFilter} onDelete={handleDelete} />
     </>
   );

@@ -3,11 +3,12 @@ import PropTypes from 'prop-types';
 
 const useStyles = createUseStyles({
   listItem: {
+    marginLeft: 'auto',
+    marginRight: 'auto',
     width: 300,
     display: 'flex',
     alignItems: 'center',
     padding: 10,
-    background: 'linear-gradient(to left, #f8ab8d 0%, white, #f8ab8d)',
   },
   name: {
     marginRight: 'auto',
@@ -17,19 +18,25 @@ const useStyles = createUseStyles({
     marginRight: 'auto',
   },
   button: {
-    backgroundColor: 'rgb(184, 92, 80)',
-    boxShadow: '0px 0px 3px 0px black',
-    borderRadius: 5,
+    backgroundColor: '#fff',
+    boxShadow: '1px 1px 0px 0px black',
+    border: 'none',
+    borderRadius: 3,
+    outline: 'none',
     cursor: 'pointer',
+    '&:active': {
+      color: 'orange',
+      boxShadow: '3px 3px 0px 0px orange',
+    },
   },
 });
 const ContactItem = ({ name, number, id, onDelete }) => {
-  const classes = useStyles();
+  const s = useStyles();
   return (
-    <li className={classes.listItem}>
-      <p className={classes.name}>{name}</p>
-      <p className={classes.number}>{number}</p>
-      <button className={classes.button} onClick={() => onDelete(id)}>
+    <li className={s.listItem}>
+      <p className={s.name}>{name}</p>
+      <p className={s.number}>{number}</p>
+      <button className={s.button} onClick={() => onDelete(id)}>
         Delete
       </button>
     </li>
